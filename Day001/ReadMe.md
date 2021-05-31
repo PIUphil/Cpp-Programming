@@ -1,9 +1,7 @@
 ## Day001
-|ex01|Hello World!! Welcom to C++ Programming!!|　|ex02|using std|
-|:---:|:---|---|:---:|:---|
-|ex03|define||ex04|cin, cout, endl|
-ex05 - 선언문,입력문,처리문,출력문  
-ex06 - 함수 오버로딩  
+|ex01|Hello World!! Welcom to C++ Programming!!|　|ex02|using std|　|ex03|define|
+|:---:|:---|---|:---:|:---|---|:---:|:---|
+|ex04|cin, cout, endl||ex05|선언문,입력문,처리문,출력문||ex06|함수 오버로딩|
 ex07 - 디폴트 파라미터  
 ex08 - 매크로함수, 인라인함수  
 ex09 - 전역변수, 지역변수  
