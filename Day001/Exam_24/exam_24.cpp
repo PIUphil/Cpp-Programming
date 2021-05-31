@@ -2,9 +2,7 @@
 using namespace std;
 
 int main() {
-	grd_li = list('A', 'B', 'C', 'D', 'F');
-
-	cout << grd_li[2];
+	int kor, eng, math, tot, avg;
 
 	return 0;
 }
