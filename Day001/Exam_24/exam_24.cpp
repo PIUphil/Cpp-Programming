@@ -5,5 +5,6 @@ int main() {
 	int kor, eng, math, tot, avg;
 	cout << "국어 점수 = ";
 	cin >> kor;
+	cout << "영어 점수 = ";
 	return 0;
 }
