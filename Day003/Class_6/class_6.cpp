@@ -11,7 +11,6 @@ using namespace std;
 class Rect {
 public:
 	int width, height;
-	//int sq = 0;
 
 public:
 	Rect() {			// 기본생성자 - 멤버필드를 초기화시켜주는 역할
