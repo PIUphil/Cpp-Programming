@@ -12,3 +12,6 @@
 |ex19|비교연산자(==,!=,>,<)||ex20|비트연산자|
 |ex21|삼항연산자(cf.조건문)||ex22|제어문|
 |ex23|과제(과목 총점,평균,학점 구하기)|
+
+
+![image](https://user-images.githubusercontent.com/58851945/120472987-83ba1380-c3e1-11eb-9d08-3232e90f9ff3.png)
