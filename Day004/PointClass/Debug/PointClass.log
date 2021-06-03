@@ -1,0 +1,3 @@
+﻿  point.cpp
+D:\C++_Prograimming\source\Day004\PointClass\point.cpp(37,4): error C2039: 'pos3': 'Canvas'의 멤버가 아닙니다.
+D:\C++_Prograimming\source\Day004\PointClass\point.cpp(16): message : 'Canvas' 선언을 참조하십시오.
