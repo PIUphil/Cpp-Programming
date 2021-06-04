@@ -1,0 +1,2 @@
+﻿  employeeSystem.cpp
+D:\C++_Prograimming\source\Day005\Employee\employeeSystem.cpp(22): error C4716: 'Employee::getPay': 값을 반환해야 합니다.
