@@ -10,6 +10,3 @@
 |FruitSeller|사과장수||PointClass|정보은닉(x,y)|
 |Point|정보은닉(get,set), 객체배열,||person|사람-동적할당|
 |person2|사람-동적할당,포인터||constructor|복사생성자|
-||||||
-|Bank_v1|은행시스템||Bank_v2|은행-동적할당|
-|Bank_v3|은행-복사생성자|
