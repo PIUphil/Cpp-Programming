@@ -21,7 +21,7 @@ public:
 		return 0;			// 똑같은거 있으면 자식꺼가 실행된다?!
 	}						// =>> 추상화(abstract)
 
-	void show() {}
+	virtual void show() {}
 
 	void showName() {
 		cout << "이름 : " << name << endl;
@@ -97,8 +97,10 @@ public:
 
 	// 모든 직원의 정보를 출력하는 메서드
 	void showAllSalary() {
-		for (int i = 0; i < empNum; i++)
-			empList[i]->showName();
+		for (int i = 0; i < empNum; i++) {
+			// empList[i]->showName();
+			empList[i]->show();
+		}
 	}
 };
 
