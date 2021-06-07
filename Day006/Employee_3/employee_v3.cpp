@@ -1,9 +1,9 @@
 /*
-  »ó¼Ó(Inheritance) : ±â¹İÅ¬·¡½º, ÆÄ»ıÅ¬·¡½º
-  Á÷¿ø(Employee) : ÀÌ¸§
-    Á¤±ÔÁ÷(Permanent) : ÀÌ¸§, ±Ş¿©(±âº»±Ş)
-      ¿µ¾÷Á÷(Sales) : ÀÌ¸§, ±Ş¿©(±âº»±Ş+¼ö´ç(ÆÇ¸Å½ÇÀû*º¸³Ê½º))
-    ÀÓ½ÃÁ÷(Temporary) : ÀÌ¸§, ±Ş¿©(±Ù¹«½Ã°£*½Ã°£´ç±Ş¿©)
+  ìƒì†(Inheritance) : ê¸°ë°˜í´ë˜ìŠ¤, íŒŒìƒí´ë˜ìŠ¤
+  ì§ì›(Employee) : ì´ë¦„
+    ì •ê·œì§(Permanent) : ì´ë¦„, ê¸‰ì—¬(ê¸°ë³¸ê¸‰)
+      ì˜ì—…ì§(Sales) : ì´ë¦„, ê¸‰ì—¬(ê¸°ë³¸ê¸‰+ìˆ˜ë‹¹(íŒë§¤ì‹¤ì *ë³´ë„ˆìŠ¤))
+    ì„ì‹œì§(Temporary) : ì´ë¦„, ê¸‰ì—¬(ê·¼ë¬´ì‹œê°„*ì‹œê°„ë‹¹ê¸‰ì—¬)
 */
 
 #include <iostream>
@@ -11,8 +11,8 @@
 using namespace std;
 
 /*
-  Å¬·¡½º ÀÌ¸§ : Employee (ÃÖ»óÀ§ Å¬·¡½º)
-  Å¬·¡½º À¯Çü : Entity Å¬·¡½º
+  í´ë˜ìŠ¤ ì´ë¦„ : Employee (ìµœìƒìœ„ í´ë˜ìŠ¤)
+  í´ë˜ìŠ¤ ìœ í˜• : Entity í´ë˜ìŠ¤
 */
 
 class Employee {
@@ -25,18 +25,29 @@ public:
         this->name = name;
     }
 
-    string getName() {
+    string getName() const {
         return name;
     }
 
-    void disp() {
-        cout << "ÀÌ¸§ : " << name << endl;
+    virtual void setPay() {}
+
+    // ì¶”ìƒë©”ì„œë“œ(ê°€ìƒí•¨ìˆ˜) abstract
+    virtual int getPay() const {
+        return 0;
+    }
+
+    void showName() const {
+        cout << "ì´ë¦„ : " << name << endl;
+    }
+
+    virtual void disp() const {
+        //cout << "ì´ë¦„ : " << name << endl;
     }
 };
 
 /*
-  Å¬·¡½º ÀÌ¸§ : Permanent
-  Å¬·¡½º À¯Çü : Entity Å¬·¡½º
+  í´ë˜ìŠ¤ ì´ë¦„ : Permanent
+  í´ë˜ìŠ¤ ìœ í˜• : Entity í´ë˜ìŠ¤
 */
 
 class Permanent : public Employee {
@@ -50,20 +61,135 @@ public:
         salary = pay;
     }
 
-    int getPay() {
+    int getPay() const {
         return salary;
     }
 
     /*
-      ¿À¹ö·Îµù : µ¿ÀÏÇÑ ÀÌ¸§À» °¡Áø ¸Ş¼­µå¸¦ ¿©·¯ °³ »ı¼º
-                 ´Ü, ¸Å°³º¯¼öÀÇ °³¼ö°¡ ´Ù¸£°Å³ª µ¥ÀÌÅÍ Å¸ÀÔÀÌ ´Ş¶ó¾ßÇÑ´Ù.
-      ¿À¹ö¶óÀÌµù : ÀçÁ¤ÀÇ. 
-                   ºÎ¸ğ¿Í ÀÚ³à°¡ °°Àº ÀÌ¸§ÀÇ ¸Ş¼­µå¸¦ °¡Áú ¶§,
-                   ÀÚ³à ¸Ş¼­µå°¡ ½ÇÇàµÈ´Ù.
-                   ¸â¹öÇÊµå´Â ºÎ¸ğ²¨°¡ ½ÇÇà, ¸Ş¼­µå´Â ÀÚ½Ä²¨°¡ ½ÇÇà (Ãß»ó¸Ş¼­µå)
+      ì˜¤ë²„ë¡œë”© : ë™ì¼í•œ ì´ë¦„ì„ ê°€ì§„ ë©”ì„œë“œë¥¼ ì—¬ëŸ¬ ê°œ ìƒì„±
+                 ë‹¨, ë§¤ê°œë³€ìˆ˜ì˜ ê°œìˆ˜ê°€ ë‹¤ë¥´ê±°ë‚˜ ë°ì´í„° íƒ€ì…ì´ ë‹¬ë¼ì•¼í•œë‹¤.
+      ì˜¤ë²„ë¼ì´ë”© : ì¬ì •ì˜. 
+                   ë¶€ëª¨ì™€ ìë…€ê°€ ê°™ì€ ì´ë¦„ì˜ ë©”ì„œë“œë¥¼ ê°€ì§ˆ ë•Œ,
+                   ìë…€ ë©”ì„œë“œê°€ ì‹¤í–‰ëœë‹¤.
+                   ë©¤ë²„í•„ë“œëŠ” ë¶€ëª¨êº¼ê°€ ì‹¤í–‰, ë©”ì„œë“œëŠ” ìì‹êº¼ê°€ ì‹¤í–‰ (ì¶”ìƒë©”ì„œë“œ)
     */
-    void disp() {
-        Employee::disp();
-        cout << "±Ş¿© : " << getPay() << endl << endl;
+    void disp() const {
+        //Employee::disp();
+        showName();
+        cout << "ê¸‰ì—¬ : " << getPay() << endl << endl;
     }
 };
+
+
+class Sales : public Employee {
+    int salary;
+    int salesResult;        // ë§¤ì¶œì‹¤ì 
+    int bonus;              // ìˆ˜ë‹¹
+
+public:
+    Sales(string name, int salary, int result, int bonus)
+        : Employee(name), salary(salary), salesResult(result), bonus(bonus) {}
+
+    int getPay() const {
+        return salary + (salesResult * bonus);
+    }
+
+    void disp() const {
+        showName();
+        cout << "ê¸‰ì—¬ : " << getPay() << endl << endl;
+    }
+};
+
+
+class Temporary : public Employee {
+    int times;          // ê·¼ë¬´ì‹œê°„
+    int pay;            // ì‹œê°„ë‹¹ ê¸‰ì—¬
+
+public:
+    Temporary(string name, int times, int pay)
+        : Employee(name), times(times), pay(pay) {}
+
+    int getPay() const {
+        return times * pay;
+    }
+
+    void disp() const {
+        showName();
+        cout << "ê¸‰ì—¬ : " << getPay() << endl << endl;
+    }
+};
+
+
+/*
+  í´ë˜ìŠ¤ ì´ë¦„ : EmployeeManager
+  í´ë˜ìŠ¤ ìœ í˜• : Hadler or Control í´ë˜ìŠ¤
+*/
+
+class EmployeeManager {
+    // ê°ì²´ ë™ì  ë°°ì—´
+    //Permanent* empList[100];		// 100ëª… ì§ì›ì„ ê´€ë¦¬
+    Employee* empList[100];         // ë¶€ëª¨ ê°ì²´ì— ìë…€ê°ì²´ë¥¼ ë‹´ì•„ì„œ ê´€ë¦¬ - ë‹¤í˜•ì„±
+    int empNum;
+
+public:
+    EmployeeManager() : empNum(0) {}
+
+    // ìƒˆë¡œìš´ ì§ì›ë“±ë¡ì„ ìœ„í•œ ë©”ì„œë“œ
+    void addEmployee(Employee* emp) {
+        empList[empNum++] = emp;
+    }
+
+    // ì§€ê¸‰ë˜ëŠ” ì§ì›ê¸‰ì—¬ì˜ ì´í•©ì„ ìœ„í•œ ë©”ì„œë“œ
+    void showTotalSalary() {
+        int tot = 0;
+
+        for (int i = 0; i < empNum; i++) {
+            tot += empList[i]->getPay();
+        }
+
+        cout << "ê¸‰ì—¬ì˜ ì´í•© : " << tot << endl;
+    }
+
+
+    // ì „ì²´ ë“±ë¡ëœ ì§ì›ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì„œë“œ
+    void showAllSalary() {
+        for (int i = 0; i < empNum; i++) {
+            empList[i]->disp();
+        }
+    }
+
+    ~EmployeeManager() {
+        // ë™ì í• ë‹¹ ë°›ì€ ê³µê°„ì„ ë°˜í™˜í•˜ëŠ” ì—­í• 
+        for (int i = 0; i < empNum; i++) {
+            delete empList[i];
+        }
+    }
+};
+
+
+int main() {
+
+    EmployeeManager manager;
+
+    // ì§ì›ë“±ë¡
+    manager.addEmployee(new Permanent("aaa", 1000));
+    manager.addEmployee(new Permanent("bbb", 1500));
+    manager.addEmployee(new Permanent("ccc", 2000));
+
+    manager.addEmployee(new Sales("lee", 100, 1000, 2));
+    manager.addEmployee(new Sales("park", 100, 3000, 2));
+    manager.addEmployee(new Sales("kim", 100, 5000, 2));
+
+    manager.addEmployee(new Temporary("ì´ì•Œë°”", 42, 80));
+    manager.addEmployee(new Temporary("ì €ì•Œë°”", 60, 80));
+    manager.addEmployee(new Temporary("ê·¸ì•Œë°”", 100, 80));
+
+
+    // ê¸‰ì—¬ì´í•©
+    manager.showTotalSalary();
+
+    // ì§ì›ì •ë³´
+    manager.showAllSalary();
+
+    return 0;
+}
