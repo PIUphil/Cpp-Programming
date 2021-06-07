@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
@@ -14,6 +14,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bank_5", "Bank_5\Bank_5.vcxproj", "{F8DDD820-1EFE-4A61-92BF-F85491F9FE40}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bank_6", "Bank_6\Bank_6.vcxproj", "{17E6DBE1-239B-4FEB-ACFF-1D468187D97F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bank_7", "Bank_7\Bank_7.vcxproj", "{1DB09248-ADEF-41BF-8BA2-485AACC20C46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,14 @@ Global
 		{17E6DBE1-239B-4FEB-ACFF-1D468187D97F}.Release|x64.Build.0 = Release|x64
 		{17E6DBE1-239B-4FEB-ACFF-1D468187D97F}.Release|x86.ActiveCfg = Release|Win32
 		{17E6DBE1-239B-4FEB-ACFF-1D468187D97F}.Release|x86.Build.0 = Release|Win32
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Debug|x64.ActiveCfg = Debug|x64
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Debug|x64.Build.0 = Debug|x64
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Debug|x86.ActiveCfg = Debug|Win32
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Debug|x86.Build.0 = Debug|Win32
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Release|x64.ActiveCfg = Release|x64
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Release|x64.Build.0 = Release|x64
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Release|x86.ActiveCfg = Release|Win32
+		{1DB09248-ADEF-41BF-8BA2-485AACC20C46}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
