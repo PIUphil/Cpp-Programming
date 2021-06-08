@@ -1,0 +1,3 @@
+﻿  vector.cpp
+D:\C++_Prograimming\source\Day007\Vector_1\vector.cpp(41,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Vector_1.vcxproj -> D:\C++_Prograimming\source\Day007\Debug\Vector_1.exe
