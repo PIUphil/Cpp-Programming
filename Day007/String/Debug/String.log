@@ -1,0 +1,5 @@
+﻿  string.cpp
+D:\C++_Prograimming\source\Day007\String\string.cpp(35,10): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
+D:\C++_Prograimming\source\Day007\String\string.cpp(81,3): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
+D:\C++_Prograimming\source\Day007\String\string.cpp(82,3): warning C4834: 'nodiscard' 특성이 포함된 함수의 반환 값을 버리는 중
+  String.vcxproj -> D:\C++_Prograimming\source\Day007\Debug\String.exe
