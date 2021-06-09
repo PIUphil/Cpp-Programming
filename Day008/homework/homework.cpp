@@ -1,15 +1,15 @@
-/*±³ÅëÄ«µå ÀÜ¾×À» °ü¸®ÇÏ´Â ÇÁ·Î±×·¥
-±³ÅëÄ«µå ÃÊ±â ±Ý¾×Àº 20000¿øÀÌ´Ù.
+/*êµí†µì¹´ë“œ ìž”ì•¡ì„ ê´€ë¦¬í•˜ëŠ” í”„ë¡œê·¸ëž¨
+êµí†µì¹´ë“œ ì´ˆê¸° ê¸ˆì•¡ì€ 20000ì›ì´ë‹¤.
 
-¿îÀÓÀº °íÁ¤ ¿ä±ÝÀÌ ¾Æ´Ñ °Å¸® ±ÔÄ¢¿¡ µû¶ó ÃøÁ¤ ¹× °øÁ¦µÈ´Ù.
+ìš´ìž„ì€ ê³ ì • ìš”ê¸ˆì´ ì•„ë‹Œ ê±°ë¦¬ ê·œì¹™ì— ë”°ë¼ ì¸¡ì • ë° ê³µì œëœë‹¤.
 
-±âº» ¿ä±ÝÀº 40km¿¡ 720¿ø, Ãß°¡¿ä±ÝÀº 41kmºÎÅÍ 8km´ç 80¿ø
-ÇÁ·Î±×·¥Àº °¢ ÀÌµ¿°Å¸®¸¦ ÀÔ·ÂÇÏ¿© Ä«µåÀÇ ÃÖÁ¾ ÀÜ¾×À» Ãâ·ÂÇÑ´Ù.
+ê¸°ë³¸ ìš”ê¸ˆì€ 40kmì— 720ì›, ì¶”ê°€ìš”ê¸ˆì€ 41kmë¶€í„° 8kmë‹¹ 80ì›
+í”„ë¡œê·¸ëž¨ì€ ê° ì´ë™ê±°ë¦¬ë¥¼ ìž…ë ¥í•˜ì—¬ ì¹´ë“œì˜ ìµœì¢… ìž”ì•¡ì„ ì¶œë ¥í•œë‹¤.
 
-ÃÖ¼ÒÀÌµ¿°Å¸®´Â 4km, ÃÖ´ë ÀÌµ¿°Å¸®´Â 178kmÀÌ´Ù.
+ìµœì†Œì´ë™ê±°ë¦¬ëŠ” 4km, ìµœëŒ€ ì´ë™ê±°ë¦¬ëŠ” 178kmì´ë‹¤.
 
-ÀÔ·Â°ªÀÌ À§¿¡ ÁÖ¾îÁø ¹üÀ§¸¦ ¹þ¾î³ª¸é ÇöÀç ÀÜ¾×À» Ãâ·ÂÇÏ°í,
-ÇÁ·Î±×·¥À» Á¾·áÇÑ´Ù.*/
+ìž…ë ¥ê°’ì´ ìœ„ì— ì£¼ì–´ì§„ ë²”ìœ„ë¥¼ ë²—ì–´ë‚˜ë©´ í˜„ìž¬ ìž”ì•¡ì„ ì¶œë ¥í•˜ê³ ,
+í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•œë‹¤.*/
 
 #include <iostream>
 using namespace std;
@@ -33,7 +33,7 @@ int Trfcard::money = 0;
 
 int fareCalc() {
 	int distance;
-	cout << "ÀÌµ¿ÇÒ °Å¸®(4~178) = ";
+	cout << "ì´ë™í•  ê±°ë¦¬(4~178) = ";
 	cin >> distance;
 
 	if (distance < 4 || distance >178)
@@ -42,7 +42,7 @@ int fareCalc() {
 	if(distance <= 40)
 		return 720;
 	else
-		return 720 + ((distance - 40) / 8) * 80;
+		return 720 + ((distance - 40) / 8 + 1) * 80;
 }
 
 
@@ -51,23 +51,23 @@ int main() {
 
 	while (true) {
 		if (card.getMoney() < 720) {
-			cout << "ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù." << endl;
+			cout << "ìž”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤." << endl;
 			return 0;
 		}
 
 		int c = fareCalc();
 
 		if (c == 0) {
-			cout << "Ä«µå ÀÜ¿© ±Ý¾×Àº " << card.getMoney() << "¿ø ÀÔ´Ï´Ù." << endl;
+			cout << "ì¹´ë“œ ìž”ì—¬ ê¸ˆì•¡ì€ " << card.getMoney() << "ì› ìž…ë‹ˆë‹¤." << endl;
 			return 0;
 		}
 		else {
 			card.setMoney(c);
 			if (card.getMoney() < 0) {
-				cout << "ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ´õÀÌ»ó °¥ ¼ö ¾ø½À´Ï´Ù." << endl;
+				cout << "ìž”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ë”ì´ìƒ ê°ˆ ìˆ˜ ì—†ìŠµë‹ˆë‹¤." << endl;
 				return 0;
 			}
-			cout << "Ä«µå ÀÜ¿© ±Ý¾×Àº " << card.getMoney() << "¿ø ÀÔ´Ï´Ù." << endl << endl;
+			cout << "ì¹´ë“œ ìž”ì—¬ ê¸ˆì•¡ì€ " << card.getMoney() << "ì› ìž…ë‹ˆë‹¤." << endl << endl;
 		}
 	}
 	return 0;
