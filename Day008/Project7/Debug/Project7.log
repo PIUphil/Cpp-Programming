@@ -1,0 +1,3 @@
+﻿  function.cpp
+D:\C++_Prograimming\source\Day008\Project7\function.cpp(22,5): error C2084: 'int adder(int [])' 함수에 이미 본문이 있습니다.
+D:\C++_Prograimming\source\Day008\Project7\function.cpp(14): message : 'adder'의 이전 정의를 참조하십시오.
