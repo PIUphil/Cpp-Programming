@@ -1,0 +1,13 @@
+﻿  main.cpp
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(28,54): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(43,75): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(64,70): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(85,70): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(135,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(157,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(237,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(264,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(280,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(294,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\phil\source\repos\Project_chicken\Project_chicken\main.cpp(354,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Project_chicken.vcxproj -> C:\Users\phil\source\repos\Project_chicken\Debug\Project_chicken.exe
