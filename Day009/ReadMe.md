@@ -14,4 +14,6 @@
 |file7|단어검색-yesterday|
 ||||||
 |question|단어빈도수||||
+
+
 ![image](https://user-images.githubusercontent.com/58851945/121477908-600b5480-ca03-11eb-88a1-024e158141f8.png)
