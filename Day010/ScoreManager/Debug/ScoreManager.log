@@ -1,0 +1,3 @@
+﻿  studentManager.cpp
+D:\C++_Prograimming\source\Day010\ScoreManager\studentManager.cpp(155,8): warning C4101: 'name' :참조되지 않은 지역 변수입니다.
+  ScoreManager.vcxproj -> D:\C++_Prograimming\source\Day010\Debug\ScoreManager.exe
