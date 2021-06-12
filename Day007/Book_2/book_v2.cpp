@@ -9,7 +9,7 @@ class Book {
     int price;
 
 public:
-    Book();         // µğÆúÆ® »ı¼ºÀÚ
+    Book();         // ë””í´íŠ¸ ìƒì„±ì
     Book(string t, string w, int p);
 
     string getTitle() const;
@@ -36,38 +36,39 @@ int Book::getPrice() const { return price; }
 void Book::setPrice(int p) { price = p; }
 
 void Book::bookInfo() const {
-    cout << "Ã¥ Á¦¸ñ : " << title << endl;
-    cout << "ÀúÀÚ¸í  : " << writer << endl;
-    cout << "Ã¥ °¡°İ : " << price << endl << endl;
+    cout << "ì±… ì œëª© : " << title << endl;
+    cout << "ì €ìëª…  : " << writer << endl;
+    cout << "ì±… ê°€ê²© : " << price << endl << endl;
 }
 
 /*
-  Å¬·¡½º ÀÌ¸§ : BookHandler
-  Å¬·¡½º À¯Çü : Control Å¬·¡½º
-  Ã³¸®±â´É
-  1. Ã¥À» µî·ÏÇÏ´Â ÀÛ¾÷
-  2. µî·ÏµÈ Ã¥¿¡ ´ëÇÑ Á¤º¸¸¦ Ãâ·Â
-  3. µî·ÏµÈ Ã¥¿¡ ¸ğµç ±İ¾×À» ´©ÀûÇØ Ãâ·Â
-  4. µî·ÏµÈ Ã¥ÀÇ ÀúÀÚ¸íÀ» ÅëÇØ Ã¥ÀÇ Á¤º¸¸¦ Ãâ·Â
-  5. Ã¥ Á¦¸ñÀ» ÅëÇØ ÇØ´ç Ã¥ÀÇ ³»¿ëÀ» ¼öÁ¤ÇÏµµ·Ï ±¸Çö
-  6. ÇÑ ±Ç ÀÌ»óÀÇ Ã¥À» ´ã¾Æ¼­ Ã³¸®ÇÒ ¼ö ÀÖµµ·Ï ÀÚ·á±¸Á¶¸¦ È°¿ë
+  í´ë˜ìŠ¤ ì´ë¦„ : BookHandler
+  í´ë˜ìŠ¤ ìœ í˜• : Control í´ë˜ìŠ¤
+  ì²˜ë¦¬ê¸°ëŠ¥
+  1. ì±…ì„ ë“±ë¡í•˜ëŠ” ì‘ì—…
+  2. ë“±ë¡ëœ ì±…ì— ëŒ€í•œ ì •ë³´ë¥¼ ì¶œë ¥
+  3. ë“±ë¡ëœ ì±…ì— ëª¨ë“  ê¸ˆì•¡ì„ ëˆ„ì í•´ ì¶œë ¥
+  4. ë“±ë¡ëœ ì±…ì˜ ì €ìëª…ì„ í†µí•´ ì±…ì˜ ì •ë³´ë¥¼ ì¶œë ¥
+  5. ì±… ì œëª©ì„ í†µí•´ í•´ë‹¹ ì±…ì˜ ë‚´ìš©ì„ ìˆ˜ì •í•˜ë„ë¡ êµ¬í˜„
+  6. í•œ ê¶Œ ì´ìƒì˜ ì±…ì„ ë‹´ì•„ì„œ ì²˜ë¦¬í•  ìˆ˜ ìˆë„ë¡ ìë£Œêµ¬ì¡°ë¥¼ í™œìš©
 */
 
 class BookHandler {
     vector<Book> book;
 
 public:
-    // Ã¥À» µî·ÏÇÏ´Â ÀÛ¾÷
+    // ì±…ì„ ë“±ë¡í•˜ëŠ” ì‘ì—…
     void addBook();
-    // ÇöÀç µî·ÏµÈ Ã¥ÀÇ ¼ö¸¦ ¸®ÅÏ
+    // í˜„ì¬ ë“±ë¡ëœ ì±…ì˜ ìˆ˜ë¥¼ ë¦¬í„´
     void getBook();
-    // µî·ÏµÈ ¸ğµç Ã¥ÀÇ Á¤º¸ Ãâ·Â
+    // ë“±ë¡ëœ ëª¨ë“  ì±…ì˜ ì •ë³´ ì¶œë ¥
     void showAllBook();
-    // µî·ÏµÈ Ã¥ÀÇ °¡°İ ´©Àû
+    // ë“±ë¡ëœ ì±…ì˜ ê°€ê²© ëˆ„ì 
     void showAllPrice();
-    // ÀúÀÚ¸í¿¡ µû¸¥ Ã¥Á¤º¸ Ãâ·Â
+    // ì €ìëª…ì— ë”°ë¥¸ ì±…ì •ë³´ ì¶œë ¥
     void getBookInfo();
-    // Á¦¸ñ¿¡ µû¸¥ Ã¥ ¼öÁ¤
+    void getBookInfo2();    // ì±…ì œëª©ìœ¼ë¡œ ê²€ìƒ‰
+    // ì œëª©ì— ë”°ë¥¸ ì±… ìˆ˜ì •
     void editBook();
 };
 
@@ -76,24 +77,24 @@ void BookHandler::addBook() {
     string writer;
     int price;
 
-    cout << "Ã¥Á¦¸ñ = ";
+    cout << "ì±…ì œëª© = ";
     //cin >> title;
     getline(cin, title);
-    cout << "ÀúÀÚ¸í = ";
+    cout << "ì €ìëª… = ";
     //cin >> writer;
     getline(cin, writer);
-    cout << "Ã¥°¡°İ = ";
+    cout << "ì±…ê°€ê²© = ";
     cin >> price;
     
 
     /*Book b(title, writer, price);
     book.push_back(b);*/
     book.push_back(Book(title, writer, price));
-    cout << "Ã¥ µî·ÏÀ» ¿Ï·áÇß½À´Ï´Ù." << endl << endl;
+    cout << "ì±… ë“±ë¡ì„ ì™„ë£Œí–ˆìŠµë‹ˆë‹¤." << endl << endl;
 }
 
 void BookHandler::getBook() {
-    cout << "µî·ÏµÈ Ã¥ÀÇ °³¼ö : " << book.size() << endl;
+    cout << "ë“±ë¡ëœ ì±…ì˜ ê°œìˆ˜ : " << book.size() << endl;
 }
 
 void BookHandler::showAllBook() {
@@ -109,11 +110,11 @@ void BookHandler::showAllPrice() {
     for (auto it = book.begin(); it != book.end(); it++) {
         sum += it->getPrice();
     }
-    cout << "ÃÑ µµ¼­°¡°İ : " << sum << endl;
+    cout << "ì´ ë„ì„œê°€ê²© : " << sum << endl;
 }
 
 void BookHandler::getBookInfo() {
-    cout << "ÀúÀÚ¸í = ";
+    cout << "ì €ìëª… = ";
     string w;
     getline(cin, w);
 
@@ -123,22 +124,38 @@ void BookHandler::getBookInfo() {
             return;
         }   
     }
-    cout << "ÀÔ·ÂÇÑ ÀúÀÚ¿¡ ´ëÇÑ µµ¼­´Â ¹ß°ßµÇÁö ¾Ê¾Ò½À´Ï´Ù." << endl << endl;
+    cout << "ì…ë ¥í•œ ì €ìì— ëŒ€í•œ ë„ì„œëŠ” ë°œê²¬ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤." << endl << endl;
+}
+
+void BookHandler::getBookInfo2() {
+    cout << "ì±…ì œëª© = ";
+    string t;
+    getline(cin, t);
+
+    for (auto it = book.begin(); it != book.end(); it++) {
+        if (it->getTitle() == t) {
+            it->bookInfo();
+            return;
+        }
+    }
+    cout << "ì…ë ¥í•œ ì €ìì— ëŒ€í•œ ë„ì„œëŠ” ë°œê²¬ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤." << endl << endl;
 }
 
 void BookHandler::editBook() {
-    cout << "Ã¥Á¦¸ñ = ";
+    cout << "ì±…ì œëª© = ";
     string t;
     cin >> t;
 
     for (auto it = book.begin(); it != book.end(); it++) {
         if (it->getTitle() == t) {
             
-            cout << "ÀúÀÚ¸í = ";
+            cout << "ì €ìëª… = ";
             string w;
-            getline(cin, w);
+            cin >> w;
+            /*getline(cin, w);
+            cin.ignore();*/
             
-            cout << "Ã¥°¡°İ = ";
+            cout << "ì±…ê°€ê²© = ";
             int p;
             cin >> p;
 
@@ -152,51 +169,54 @@ int main() {
     BookHandler manager;
 
     while (true) {
-        // ¸Ş´ºÃâ·Â
+        // ë©”ë‰´ì¶œë ¥
         cout << "== Book Manager ==\n";
-        cout << "1. µµ¼­ µî·Ï\n";
-        cout << "2. µµ¼­ °Ë»ö\n";
-        cout << "3. µµ¼­ Ãâ·Â\n";
-        cout << "4. ÀÛ¾÷ Á¾·á\n";
+        cout << "1. ë„ì„œ ë“±ë¡\n";
+        cout << "2. ë„ì„œ ê²€ìƒ‰\n";
+        cout << "3. ë„ì„œ ì¶œë ¥\n";
+        cout << "4. ë„ì„œ ìˆ˜ì •\n";
+        cout << "5. ì‘ì—… ì¢…ë£Œ\n";
         cout << "===================\n";
         int ch;
-        cout << "¼±ÅÃ = ";
+        cout << "ì„ íƒ = ";
         cin >> ch;
 
-        // ÀÔ·Â¹öÆÛ¸¦ Áö¿ì´Â ÀÛ¾÷
+        // ì…ë ¥ë²„í¼ë¥¼ ì§€ìš°ëŠ” ì‘ì—…
         cin.ignore();
 
-        // ¼±ÅÃ¿¡¼­ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ°í ¿£ÅÍ¸¦ ´©¸£¸é
-        // '¿£ÅÍ' (= \n)°¡ ´ÙÀ½À¸·Î ³Ñ¾î°¡¼­ ¹®ÀÚ·Î ÀÔ·ÂµÇ¾î¹ö¸² -> ÀÔ·Â¹öÆÛ¿¡ ³²¾ÆÀÖÀ½
-        // '¿£ÅÍ'¸¦ Áö¿ì±âÀ§ÇØ ignore()¸¦ ÇØÁÜ -> // ÀÔ·Â¹öÆÛ ÃÊ±âÈ­(cin.clear())
+        // ì„ íƒì—ì„œ ìˆ«ìë¥¼ ì…ë ¥í•˜ê³  ì—”í„°ë¥¼ ëˆ„ë¥´ë©´
+        // 'ì—”í„°' (= \n)ê°€ ë‹¤ìŒìœ¼ë¡œ ë„˜ì–´ê°€ì„œ ë¬¸ìë¡œ ì…ë ¥ë˜ì–´ë²„ë¦¼ -> ì…ë ¥ë²„í¼ì— ë‚¨ì•„ìˆìŒ
+        // 'ì—”í„°'ë¥¼ ì§€ìš°ê¸°ìœ„í•´ ignore()ë¥¼ í•´ì¤Œ -> // ì…ë ¥ë²„í¼ ì´ˆê¸°í™”(cin.clear())
 
         /*
-         ¹®ÀÚ¿­À» ÀÔÃâ·ÂÇÏ´Â ÇÔ¼ö : gets(), puts()
-         gets(º¯¼ö); // ¹®ÀÚ¿­ ÀÔ·Â     // º¯¼ö·Î ÀÔ·Â // get - ÀÔ·ÂÀ» ¹Ş¾Æ¿È
-         puts(º¯¼ö); // ¹®ÀÚ¿­ Ãâ·Â    //º¯¼ö¿¡ ÀÖ´Â°ÍÀ» Ãâ·Â
+         ë¬¸ìì—´ì„ ì…ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ : gets(), puts()
+         gets(ë³€ìˆ˜); // ë¬¸ìì—´ ì…ë ¥     // ë³€ìˆ˜ë¡œ ì…ë ¥ // get - ì…ë ¥ì„ ë°›ì•„ì˜´
+         puts(ë³€ìˆ˜); // ë¬¸ìì—´ ì¶œë ¥    //ë³€ìˆ˜ì— ìˆëŠ”ê²ƒì„ ì¶œë ¥
         */
         // fflush(stdin);      // stdio.h
         
-        //gets();     // getstring();     ÇÏ³ªÀÇ ¹®ÀÚ¿­À» ¾ò¾î¿Í¶ó
+        //gets();     // getstring();     í•˜ë‚˜ì˜ ë¬¸ìì—´ì„ ì–»ì–´ì™€ë¼
         // puts();
 
         switch (ch) {
         case 1: manager.addBook(); break;
         case 2: {
-            cout << "== °Ë»ö¹æ¹ı ==\n";
-            cout << "[1]ÀúÀÚ¸í [2]µµ¼­¸í\n";
+            cout << "== ê²€ìƒ‰ë°©ë²• ==\n";
+            cout << "[1]ì €ìëª… [2]ë„ì„œëª…\n";
             int c;
             cin >> c;
             cin.ignore();
             if (c == 1) manager.getBookInfo();
-            else if (c == 2) manager.editBook();    // ¾Æ´Ô..
-            else cout << "¿Ã¹Ù¸£Áö ¾ÊÀº ¼±ÅÃÀÔ´Ï´Ù.\n";
+            else if (c == 2) manager.getBookInfo2();
+            else cout << "ì˜¬ë°”ë¥´ì§€ ì•Šì€ ì„ íƒì…ë‹ˆë‹¤.\n";
             break;
         }
         case 3:
             manager.showAllBook(); break;
         case 4:
-            cout << "ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n";
+            manager.editBook(); break;
+        case 5:
+            cout << "í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.\n";
             return 0;
         }
     }
